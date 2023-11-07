@@ -4,6 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBatalla;
+import ar.edu.unlam.pb2.eva03.excepciones.VehiculoIncompatible;
+import ar.edu.unlam.pb2.eva03.excepciones.VehiculoInexistente;
+import ar.edu.unlam.pb2.eva03.interfaces.Acuatico;
+import ar.edu.unlam.pb2.eva03.interfaces.Terrestre;
+import ar.edu.unlam.pb2.eva03.interfaces.Volador;
+
 public class Recuperatorio {
 
 	@Test
@@ -70,8 +77,8 @@ public class Recuperatorio {
 		
 		argentina.crearBatalla("San Lorenzo", TipoDeBatalla.TERRESTRE, 100.5, 20.3);
 		
-		assertEquals(100.5, argentina.getBatalla("San Lorenzo").getLatitud(),0.01);
-		assertEquals(20.3, argentina.getBatalla("San Lorenzo").getLongitud(),0.01);
+		assertEquals((Double)100.5, argentina.getBatalla("San Lorenzo").getLatitud(),0.01);
+		assertEquals((Double)20.3, argentina.getBatalla("San Lorenzo").getLongitud(),0.01);
 	}	
 	
 	@Test
